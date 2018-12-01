@@ -9,48 +9,53 @@ with open("alcohols.json") as file:
 
 
 #HAPPINESS
-happinessDrinkDict = {**alcohols['Red Wine'], **alcohols['Beers']}
+if (emotion == "happiness"):
+	happinessDrinkDict = {**alcohols['Red Wine'], **alcohols['Beers']}
 
 
-lst = []
-for drink in happinessDrinkDict.keys():
-	if float(happinessDrinkDict[drink]) <= float(budget):
-		lst.append((drink,happinessDrinkDict[drink]))
-happyChoice = lst[random.randint(0,len(lst)-1)]
+	lst = []
+	for drink in happinessDrinkDict.keys():
+		if float(happinessDrinkDict[drink]) <= float(budget):
+			lst.append((drink,happinessDrinkDict[drink]))
+	happyChoice = lst[random.randint(0,len(lst)-1)]
 
-#NEUTRAL
-neutralDrinkDict = {**alcohols['Vodka']}
+	#NEUTRAL
+if(emotion == "neutral"):
+	neutralDrinkDict = {**alcohols['Vodka']}
 
+	neutralList = []
+	for drink in neutralDrinkDict.keys():
+		if float(neutralDrinkDict[drink]) <= float(budget):
+			neutralList.append((drink, neutralDrinkDict[drink]))
+	neutralChoice = neutralList[random.randint(0,len(neutralList)-1)]
 
-neutralList = []
-for drink in neutralDrinkDict.keys():
-	if float(neutralDrinkDict[drink]) <= float(budget):
-		neutralList.append((drink, neutralDrinkDict[drink]))
-neutralChoice = neutralList[random.randint(0,len(neutralList)-1)]
 
 
 #ANGER
 
-angerDrinkDict = {**alcohols['White Wine']}
+elif(emotion == "anger"):
+	angerDrinkDict = {**alcohols['White Wine']}
 
 
-angerList = []
-for drink in angerDrinkDict.keys():
-	if float(angerDrinkDict[drink]) <= float(budget):
-		angerList.append((drink, angerDrinkDict[drink]))
-angerChoice = angerList[random.randint(0,len(angerList)-1)
-]
+	angerList = []
+	for drink in angerDrinkDict.keys():
+		if float(angerDrinkDict[drink]) <= float(budget):
+			angerList.append((drink, angerDrinkDict[drink]))
+	angerChoice = angerList[random.randint(0,len(angerList)-1)]
 
 #SADNESS
 
-sadnessDrinkDict = {**alcohols['White Wine']}
+
+elif(emotion == "sadness"):
+
+	sadnessDrinkDict = {**alcohols['White Wine']}
 
 
-sadnessList = []
-for drink in sadnessDrinkDict.keys():
-	if float(sadnessDrinkDict[drink]) <= float(budget):
-		sadnessList.append((drink, sadnessDrinkDict[drink]))
-sadnessChoice = sadnessList[random.randint(0,len(sadnessList)-1)]
+	sadnessList = []
+	for drink in sadnessDrinkDict.keys():
+		if float(sadnessDrinkDict[drink]) <= float(budget):
+			sadnessList.append((drink, sadnessDrinkDict[drink]))
+	sadnessChoice = sadnessList[random.randint(0,len(sadnessList)-1)]
 
 
 
