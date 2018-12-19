@@ -54,7 +54,7 @@ def imagerec(bot, update):
 	url = "https://westcentralus.api.cognitive.microsoft.com/face/v1.0/detect"
 	querystring = {"returnFaceId":"true","returnFaceLandmarks":"false","returnFaceAttributes":"emotion,age,gender"}
 
-	image_path = "/Users/AkshayC/Desktop/test.jpg"
+	image_path = "test.jpg"
 	image_data = open(image_path, "rb").read()
 
 	headers = {
